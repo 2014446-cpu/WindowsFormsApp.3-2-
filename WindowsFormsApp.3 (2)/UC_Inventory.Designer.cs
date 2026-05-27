@@ -33,11 +33,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtDelete = new System.Windows.Forms.TextBox();
-            this.dgvInventory = new System.Windows.Forms.DataGridView();
+            this.aa = new System.Windows.Forms.DataGridView();
             this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbProductDetails = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
@@ -53,9 +53,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.dgvInventory = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aa)).BeginInit();
             this.gbProductDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -80,6 +87,7 @@
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Save Changes";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox2
             // 
@@ -106,6 +114,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtDelete
             // 
@@ -117,26 +126,26 @@
             this.txtDelete.Size = new System.Drawing.Size(116, 22);
             this.txtDelete.TabIndex = 12;
             // 
-            // dgvInventory
+            // aa
             // 
-            this.dgvInventory.AllowUserToAddRows = false;
-            this.dgvInventory.AllowUserToDeleteRows = false;
-            this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.aa.AllowUserToAddRows = false;
+            this.aa.AllowUserToDeleteRows = false;
+            this.aa.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.aa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.aa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductID,
             this.ProductName,
-            this.ProductPrice,
             this.ProductBrand,
+            this.ProductPrice,
             this.ProductQuantity});
-            this.dgvInventory.GridColor = System.Drawing.Color.Gray;
-            this.dgvInventory.Location = new System.Drawing.Point(466, 102);
-            this.dgvInventory.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvInventory.Name = "dgvInventory";
-            this.dgvInventory.ReadOnly = true;
-            this.dgvInventory.RowHeadersWidth = 51;
-            this.dgvInventory.Size = new System.Drawing.Size(558, 436);
-            this.dgvInventory.TabIndex = 15;
+            this.aa.GridColor = System.Drawing.Color.Gray;
+            this.aa.Location = new System.Drawing.Point(-1664, 89);
+            this.aa.Margin = new System.Windows.Forms.Padding(4);
+            this.aa.Name = "aa";
+            this.aa.ReadOnly = true;
+            this.aa.RowHeadersWidth = 51;
+            this.aa.Size = new System.Drawing.Size(681, 436);
+            this.aa.TabIndex = 15;
             // 
             // ProductID
             // 
@@ -156,15 +165,6 @@
             this.ProductName.ReadOnly = true;
             this.ProductName.Width = 125;
             // 
-            // ProductPrice
-            // 
-            this.ProductPrice.DataPropertyName = "ProductPrice";
-            this.ProductPrice.HeaderText = "Price";
-            this.ProductPrice.MinimumWidth = 6;
-            this.ProductPrice.Name = "ProductPrice";
-            this.ProductPrice.ReadOnly = true;
-            this.ProductPrice.Width = 125;
-            // 
             // ProductBrand
             // 
             this.ProductBrand.DataPropertyName = "ProductBrand";
@@ -173,6 +173,15 @@
             this.ProductBrand.Name = "ProductBrand";
             this.ProductBrand.ReadOnly = true;
             this.ProductBrand.Width = 125;
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.DataPropertyName = "ProductPrice";
+            this.ProductPrice.HeaderText = "Price";
+            this.ProductPrice.MinimumWidth = 6;
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.ReadOnly = true;
+            this.ProductPrice.Width = 125;
             // 
             // ProductQuantity
             // 
@@ -219,6 +228,7 @@
             this.btnClear.TabIndex = 17;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtQuantity
             // 
@@ -326,6 +336,7 @@
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -337,24 +348,93 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add Product";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // dgvInventory
+            // 
+            this.dgvInventory.AllowUserToAddRows = false;
+            this.dgvInventory.AllowUserToDeleteRows = false;
+            this.dgvInventory.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dgvInventory.Location = new System.Drawing.Point(454, 92);
+            this.dgvInventory.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvInventory.Name = "dgvInventory";
+            this.dgvInventory.ReadOnly = true;
+            this.dgvInventory.RowHeadersWidth = 51;
+            this.dgvInventory.Size = new System.Drawing.Size(679, 433);
+            this.dgvInventory.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProductID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ProductBrand";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Brand";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "ProductPrice";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ProductQuantity";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // UC_Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Controls.Add(this.dgvInventory);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dgvInventory);
+            this.Controls.Add(this.aa);
             this.Controls.Add(this.gbProductDetails);
             this.Name = "UC_Inventory";
             this.Size = new System.Drawing.Size(1187, 616);
+            this.Load += new System.EventHandler(this.UC_Inventory_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aa)).EndInit();
             this.gbProductDetails.ResumeLayout(false);
             this.gbProductDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,12 +447,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtDelete;
-        private System.Windows.Forms.DataGridView dgvInventory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductBrand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantity;
+        private System.Windows.Forms.DataGridView aa;
         private System.Windows.Forms.GroupBox gbProductDetails;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtQuantity;
@@ -387,5 +462,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductBrand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductQuantity;
+        private System.Windows.Forms.DataGridView dgvInventory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

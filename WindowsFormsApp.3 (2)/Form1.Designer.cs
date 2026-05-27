@@ -52,14 +52,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(278, 621);
+            this.panel1.Size = new System.Drawing.Size(424, 617);
             this.panel1.TabIndex = 2;
             // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(0, 742);
+            this.btnLogout.Location = new System.Drawing.Point(0, 589);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(126, 27);
             this.btnLogout.TabIndex = 4;
@@ -72,7 +72,7 @@
             this.btnCheckOut.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCheckOut.Location = new System.Drawing.Point(60, 560);
+            this.btnCheckOut.Location = new System.Drawing.Point(60, 448);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(141, 36);
@@ -86,7 +86,7 @@
             this.btnOrders.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnOrders.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrders.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnOrders.Location = new System.Drawing.Point(60, 394);
+            this.btnOrders.Location = new System.Drawing.Point(60, 317);
             this.btnOrders.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(141, 36);
@@ -100,7 +100,7 @@
             this.btnInv.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnInv.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnInv.Location = new System.Drawing.Point(60, 253);
+            this.btnInv.Location = new System.Drawing.Point(60, 182);
             this.btnInv.Margin = new System.Windows.Forms.Padding(4);
             this.btnInv.Name = "btnInv";
             this.btnInv.Size = new System.Drawing.Size(141, 36);
@@ -114,7 +114,7 @@
             this.btnHome.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHome.Location = new System.Drawing.Point(60, 79);
+            this.btnHome.Location = new System.Drawing.Point(60, 46);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(141, 36);
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 621);
+            this.ClientSize = new System.Drawing.Size(1455, 617);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";

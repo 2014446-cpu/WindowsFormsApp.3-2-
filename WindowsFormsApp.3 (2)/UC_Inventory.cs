@@ -22,7 +22,7 @@ namespace WindowsFormsApp._3__2_
             InitializeComponent();
         }
 
-        private void Inventory_Load(object sender, EventArgs e)
+        private void UC_Inventory_Load(object sender, EventArgs e)
         {
             LoadDataFromCSV();
         }
@@ -37,7 +37,7 @@ namespace WindowsFormsApp._3__2_
                 _inventoryList.Add(item);
             }
 
-            dgvInventory.DataSource = _inventoryList;
+            aa.DataSource = _inventoryList;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace WindowsFormsApp._3__2_
 
                     // 5. Refresh the grid to show the updated data
                     _bindingSource.ResetBindings(false);
-                    dgvInventory.Refresh();
+                    aa.Refresh();
 
                     // 6. Clear input fields
                     ClearFields();
@@ -181,6 +181,8 @@ namespace WindowsFormsApp._3__2_
         {
             try
             {
+
+                //string path = filePath;
                 // Convert BindingList to List
                 List<Product> listToSave = _inventoryList.ToList();
 
